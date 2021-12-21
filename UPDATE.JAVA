@@ -1,4 +1,4 @@
-mport javax.swing.JFrame;
+import javax.swing.JFrame;
 import javax.swing.*;
 
 
@@ -55,25 +55,16 @@ public class MK2 {
           pcode.setBounds(360, 70, 190, 25);
           p.add(pcode);
           
-          JLabel city= new JLabel("Invention Category:");
-          city.setBounds(190,110, 180, 25);
-          city.setFont(new Font("Times New Roman", Font.PLAIN, 20));
-          p.add(city);
-          
           JLabel district= new JLabel("Invention year :");
-          district.setBounds(190,150, 180, 25);
+          district.setBounds(190,120, 180, 25);
           district.setFont(new Font("Times New Roman", Font.PLAIN, 20));
           p.add(district);
           
           JTextField dt = new JTextField("");
-          dt.setBounds(360, 150, 190, 25);
+          dt.setBounds(360, 120, 190, 25);
           p.add(dt);
           
-          String[] optionsToChoose = {"Select", "Science", "Medicine", "Cultural"};
-
-          JComboBox<String> j = new JComboBox<>(optionsToChoose);
-          j.setBounds(360, 110, 190, 25);
-          p.add(j);
+          
 
           JButton reg = new JButton("Update");
              reg.setBounds(360,190,100,40);
