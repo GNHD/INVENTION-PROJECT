@@ -1,10 +1,11 @@
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.LayoutManager;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -15,7 +16,8 @@ import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 import javax.swing.border.Border;
 
-public class Menu {
+public class Menu implements ActionListener {
+
     
 
     public static void main(String[] args) 
@@ -44,10 +46,20 @@ public class Menu {
         
         JButton science = new JButton("SCIENCE");
         science.setBounds(0,50,200,50);
+        science.addActionListener(new ActionListener() { 
+            public void actionPerformed(ActionEvent e) {
+                new MK2();
+            }
+          } );
         panel2.add(science);
         
         JButton med = new JButton("Medicine");
         med.setBounds(300,50,200,50);
+        med.addActionListener(new ActionListener() { 
+            public void actionPerformed(ActionEvent e) {
+                new MK2();
+            }
+          } );
         panel2.add(med);
         
         JLabel label= new JLabel("WELCOME");
@@ -64,22 +76,48 @@ public class Menu {
         
         JButton s= new JButton("Scientific/Technological");
         s.setBounds(0,150,200,50);
+        s.addActionListener(new ActionListener() { 
+            public void actionPerformed(ActionEvent e) {
+                new MK2();
+            }
+          } );
+        
         panel2.add(s);
         
         JButton c = new JButton("Cultural");
         c.setBounds(300,150,200,50);
+        c.addActionListener(new ActionListener() { 
+            public void actionPerformed(ActionEvent e) {
+                new MK2();
+            }
+          } );
         panel2.add(c);
         
         JButton i1 = new JButton("Invention under patentionship");
         i1.setBounds(0,250,200,50);
+        i1.addActionListener(new ActionListener() { 
+            public void actionPerformed(ActionEvent e) {
+                new MK2();
+            }
+          } );
         panel2.add(i1);
         
         JButton i2 = new JButton("Invention under nomination");
         i2.setBounds(300,250,200,50);
+        i2.addActionListener(new ActionListener() { 
+            public void actionPerformed(ActionEvent e) {
+                new MK2();
+            }
+          } );
         panel2.add(i2);
         
         JButton a = new JButton("Awards");
         a.setBounds(300,350,200,50);
+        a.addActionListener(new ActionListener() { 
+            public void actionPerformed(ActionEvent e) {
+                new MK2();
+            }
+          } );
         panel2.add(a);
         
         JButton l = new JButton("Logout");
@@ -99,6 +137,12 @@ public class Menu {
     private static LayoutManager setLayout(Object object) {
         // TODO Auto-generated method stub
         return null;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+        
     }
 
 }
